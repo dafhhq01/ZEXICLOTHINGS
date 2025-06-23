@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap");
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --light-gray: #f0f0f0;
+  --medium-gray: #666;
+  --dark-gray: #222;
+  --border-radius: 0;
+  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  --navbar-total-height: calc(clamp(55px, 8vh, 70px) + 20px + 20px);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-total-height: calc(clamp(55px, 7vh, 60px) + 15px + 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --navbar-total-height: calc(clamp(50px, 7vh, 55px) + 10px + 10px);
+  }
+}
+
+/* Hilangkan outline pada semua elemen saat fokus */
+*:focus,
+*:active,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Hilangkan efek biru highlight saat tap di mobile */
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+  -moz-outline: none;
+  outline: none;
+}
+
+/* Untuk semua element klikable */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  line-height: 1.7;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.section-padding {
+  padding: 0;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+}
+

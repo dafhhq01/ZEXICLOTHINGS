@@ -1,0 +1,164 @@
+.hero {
+  position: relative;
+  min-height: 75vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.20)), 
+    url('../image-1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 90%;
+  margin: 120px auto 5%;
+  border-radius: 12px;
+  max-width: 1400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 clamp(15px, 5vw, 40px);
+}
+
+.heroTextContainer {
+  max-width: min(700px, 85vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px 0;
+  margin-left: 5%;
+}
+
+.heroTitle {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: clamp(10px, 1.5vw, 15px);
+  line-height: 1.15;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.titleLine {
+  display: block;
+}
+
+.heroSubtitle {
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  margin-bottom: clamp(15px, 2.5vw, 25px);
+  color: rgba(255,255,255,0.92);
+  font-weight: 300;
+  max-width: min(600px, 85vw);
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  gap: clamp(15px, 2.5vw, 25px);
+  margin-bottom: clamp(20px, 3.5vw, 40px);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.featureItem {
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  position: relative;
+  padding-right: clamp(15px, 2.5vw, 25px);
+}
+
+.heroButton {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: clamp(8px, 1.2vw, 12px) clamp(20px, 2.2vw, 35px); /* Diperkecil 20-30% */
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem); /* Diperkecil */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.heroButton:hover::before {
+  transform: translateX(0);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .heroTextContainer {
+    margin-left: 0;
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+  
+  .featureItem:not(:last-child)::after {
+    display: none;
+  }
+  
+  .featureItem {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  
+  .featureItem::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(255,255,255,0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    margin: 100px auto 5%;
+    min-height: 65vh;
+  }
+  
+  .heroTitle {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+  
+  .heroButton {
+    width: auto; /* Hapus lebar penuh */
+    padding: 8px 25px; /* Padding tetap konsisten */
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    max-width: 100%; /* Pastikan tidak melebihi container */
+  }
+}

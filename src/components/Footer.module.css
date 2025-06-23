@@ -1,0 +1,137 @@
+.footer {
+  background-color: #000;
+  color: var(--secondary-color);
+  padding: 60px 0 0; 
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footerBrand {
+  max-width: 400px;
+}
+
+.footerLogo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.logoHighlight {
+  color: var(--neon-accent);
+}
+
+.footerBrand p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.footerLinks h4,
+.footerContact h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  position: relative;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.footerLinks h4::after,
+.footerContact h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--neon-accent);
+}
+
+.footerContact .footerSubtext {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+.footerLinks ul {
+  list-style: none;
+}
+
+.footerLinks li {
+  margin-bottom: 15px;
+}
+
+.footerLinks button {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: var(--transition);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.footerLinks button:hover {
+  color: var(--neon-accent);
+}
+
+.footerContact .socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  font-size: clamp(0.8rem, 2.2vw, 1.2rem);
+}
+
+.socialLinks a:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px; /* ↓ semula 80px */
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  .footerContainer {
+    gap: 40px;
+  }
+
+  .footerBottom {
+    margin-top: 60px;
+  }
+}
