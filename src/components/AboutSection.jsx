@@ -50,9 +50,9 @@ const AboutSection = () => {
             </p>
 
             <div ref={statsRef} className={styles.aboutStats}>
-              <StatItem value={1000} suffix="+" label="Community Members" isInView={isInView} />
-              <StatItem value={5} label="Years Experience" isInView={isInView} />
-              <StatItem value={99} suffix="%" label="Satisfied Customers" isInView={isInView} />
+              <StatItem value={200} suffix="+" label="Community Members" isInView={isInView} />
+              <StatItem value={1} label="Years Experience" isInView={isInView} />
+              <StatItem value={100} suffix="%" label="Satisfied Customers" isInView={isInView} />
             </div>
           </div>
         </motion.div>
